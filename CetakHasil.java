@@ -47,13 +47,13 @@ class Segitiga {
     }
 }
 
-class JajarGenjnagg {
+class JajarGenjanag {
     int panjang;
     int lebar;
     int tinggi;
 
     // Constructor
-    JajarGenjnag(int p, int l, int t) {
+    JajarGenjanag(int p, int l, int t) {
         panjang = p;
         lebar = l;
         tinggi = t;
@@ -98,6 +98,44 @@ class LayangLayang {
     }
 }
 
+class Trapesium   {
+    int a;
+    int b;
+    int t;
+
+    // Constructor
+    Trapesium(int sisiA, int sisiB, int tinggi) {
+        a = sisiA;
+        b = sisiB;
+        t = tinggi;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Trapesium: " + (0.5 * (a + b) * t));
+        System.out.println("Keliling Trapesium: " + (a + b + 2 * Math.sqrt(((b - a) * (b - a) + t * t))));
+        System.out.println("-------------------------");
+    }
+}
+
+class Balok {
+    int panjang;
+    int lebar;
+    int tinggi;
+
+    // Constructor
+    Balok(int p, int l, int t) {
+        panjang = p;
+        lebar = l;
+        tinggi = t;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Balok: " + (2 * (panjang * lebar + panjang * tinggi + lebar * tinggi)));
+        System.out.println("Volume Balok: " + (panjang * lebar * tinggi));
+        System.out.println("-------------------------");
+    }
+}
+
 public class CetakHasil {
     public static void main(String[] args) {
         // 🔹 Constructor dipanggil secara otomatis saat membuat objek baru
@@ -110,7 +148,7 @@ public class CetakHasil {
         Segitiga bentuk3 = new Segitiga(10,40);
         bentuk3.CetakPerhitungan();
 
-        JajarGenjnagg bentuk4 = new JajarGenjnagg(10,40,20);
+        JajarGenjanag bentuk4 = new JajarGenjanag(10,40,20);
         bentuk4.CetakPerhitungan();
 
         kubus bentuk5 = new kubus(10);
@@ -118,5 +156,11 @@ public class CetakHasil {
 
         LayangLayang bentuk6 = new LayangLayang(10,20);
         bentuk6.CetakPerhitungan();
+
+        Trapesium bentuk7 = new Trapesium(10,20,30);
+        bentuk7.CetakPerhitungan();
+
+        Balok bentuk8 = new Balok(10,20,30);
+        bentuk8.CetakPerhitungan();
     }
 }
