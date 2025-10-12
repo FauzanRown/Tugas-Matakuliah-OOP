@@ -66,6 +66,21 @@ class JajarGenjnagg {
     }
 }
 
+class kubus {
+    int sisi;
+
+    // Constructor
+    kubus(int s) {
+        sisi = s;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Kubus: " + (6 * sisi * sisi));
+        System.out.println("Volume Kubus: " + (sisi * sisi * sisi));
+        System.out.println("-------------------------");
+    }
+}
+
 public class CetakHasil {
     public static void main(String[] args) {
         // 🔹 Constructor dipanggil secara otomatis saat membuat objek baru
