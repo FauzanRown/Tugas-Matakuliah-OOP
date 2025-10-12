@@ -81,6 +81,23 @@ class kubus {
     }
 }
 
+class LayangLayang {
+    int d1;
+    int d2;
+
+    // Constructor
+    LayangLayang(int diagonal1, int diagonal2) {
+        d1 = diagonal1;
+        d2 = diagonal2;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Layang-Layang: " + (0.5 * d1 * d2));
+        System.out.println("Keliling Layang-Layang: " + (2 * Math.sqrt((d1*d1 + d2*d2)/4)));
+        System.out.println("-------------------------");
+    }
+}
+
 public class CetakHasil {
     public static void main(String[] args) {
         // 🔹 Constructor dipanggil secara otomatis saat membuat objek baru
@@ -98,5 +115,8 @@ public class CetakHasil {
 
         kubus bentuk5 = new kubus(10);
         bentuk5.CetakPerhitungan();
+
+        LayangLayang bentuk6 = new LayangLayang(10,20);
+        bentuk6.CetakPerhitungan();
     }
 }
