@@ -95,5 +95,8 @@ public class CetakHasil {
 
         JajarGenjnagg bentuk4 = new JajarGenjnagg(10,40,20);
         bentuk4.CetakPerhitungan();
+
+        kubus bentuk5 = new kubus(10);
+        bentuk5.CetakPerhitungan();
     }
 }
