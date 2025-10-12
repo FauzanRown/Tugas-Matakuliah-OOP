@@ -10,7 +10,7 @@ class PersegiPanjang {
 
     void CetakPerhitungan(){
         System.out.println("Luas Persegi Panjang: " + (panjang * lebar));
-        System.out.println("Keliling Persegi Panjang " + panjang * 2 + lebar * 2);
+        System.out.println("Keliling Persegi Panjang: " + (2 * (panjang + lebar)));
         System.out.println("-------------------------");
     }
 }
@@ -47,13 +47,13 @@ class Segitiga {
     }
 }
 
-class JajarGenjanag {
+class JajarGenjang {
     int panjang;
     int lebar;
     int tinggi;
 
     // Constructor
-    JajarGenjanag(int p, int l, int t) {
+    JajarGenjang(int p, int l, int t) {
         panjang = p;
         lebar = l;
         tinggi = t;
@@ -93,7 +93,8 @@ class LayangLayang {
 
     void CetakPerhitungan(){
         System.out.println("Luas Layang-Layang: " + (0.5 * d1 * d2));
-        System.out.println("Keliling Layang-Layang: " + (2 * Math.sqrt((d1*d1 + d2*d2)/4)));
+        double sisi = Math.sqrt(Math.pow(d1 / 2.0, 2) + Math.pow(d2 / 2.0, 2));
+        System.out.println("Keliling Layang-Layang: " + (4 * sisi));
         System.out.println("-------------------------");
     }
 }
@@ -136,6 +137,42 @@ class Balok {
     }
 }
 
+class Prisma {
+    int panjang;
+    int lebar;
+    int tinggi;
+
+    // Constructor
+    Prisma(int p, int l, int t) {
+        panjang = p;
+        lebar = l;
+        tinggi = t;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Prisma: " + (2 * (panjang * lebar) + (panjang + lebar) * 2 * tinggi));
+        System.out.println("Volume Prisma: " + (panjang * lebar * tinggi));
+        System.out.println("-------------------------");
+    }
+}
+
+class Tabung  {
+    int r;
+    int t;
+
+    // Constructor
+    Tabung(int radius, int tinggi) {
+        r = radius;
+        t = tinggi;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Tabung: " + (2 * Math.PI * r * (r + t)));
+        System.out.println("Volume Tabung: " + (Math.PI * r * r * t));
+        System.out.println("-------------------------");
+    }
+}
+
 public class CetakHasil {
     public static void main(String[] args) {
         // 🔹 Constructor dipanggil secara otomatis saat membuat objek baru
@@ -148,7 +185,7 @@ public class CetakHasil {
         Segitiga bentuk3 = new Segitiga(10,40);
         bentuk3.CetakPerhitungan();
 
-        JajarGenjanag bentuk4 = new JajarGenjanag(10,40,20);
+        JajarGenjang bentuk4 = new JajarGenjang(10,40,20);
         bentuk4.CetakPerhitungan();
 
         kubus bentuk5 = new kubus(10);
@@ -162,5 +199,11 @@ public class CetakHasil {
 
         Balok bentuk8 = new Balok(10,20,30);
         bentuk8.CetakPerhitungan();
+
+        Prisma bentuk9 = new Prisma(10,20,30);
+        bentuk9.CetakPerhitungan();
+
+        Tabung bentuk10 = new Tabung(10,30);
+        bentuk10.CetakPerhitungan();
     }
 }
