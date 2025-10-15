@@ -173,7 +173,7 @@ class Tabung  {
     }
 }
 
-public class CetakHasil {
+public class BangunDatar {
     public static void main(String[] args) {
         // 🔹 Constructor dipanggil secara otomatis saat membuat objek baru
         PersegiPanjang bentuk1 = new PersegiPanjang(10,40);
