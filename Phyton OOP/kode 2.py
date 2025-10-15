@@ -1,7 +1,7 @@
 # Edcorner Learning Python OOPS
 
 class Human:
-
+    # class attribute
     species = "Homo Sapiens"
 
     def __init__(self, name, age, gender):
@@ -10,11 +10,8 @@ class Human:
         self.gender = gender
 
 
-# membuat objek
 x = Human("Edcorner", 32, "Male")
 y = Human("Learning", 30, "Female")
 
-# menampilkan hasil
-print(x.name, x.age, x.gender)
-print(y.name, y.age, y.gender)
-print(x.species)
+print(x.name)
+print(y.name)
