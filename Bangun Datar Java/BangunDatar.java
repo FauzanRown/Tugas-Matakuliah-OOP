@@ -1,0 +1,209 @@
+class PersegiPanjang {
+    int panjang;
+    int lebar;
+
+    // Constructor
+    PersegiPanjang(int p, int l) {  //! ✅ Nama constructor WAJIB sama dengan nama class
+        panjang = p;
+        lebar = l;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Persegi Panjang: " + (panjang * lebar));
+        System.out.println("Keliling Persegi Panjang: " + (2 * (panjang + lebar)));
+        System.out.println("-------------------------");
+    }
+}
+
+class Persegi {
+    int sisi;
+
+    // Constructor
+    Persegi(int s) {
+        sisi = s;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Persegi: " + (sisi * sisi));
+        System.out.println("Keliling Persegi: " + (sisi * 4));
+        System.out.println("-------------------------");
+    }
+}
+
+class Segitiga {
+    int alas;
+    int tinggi;
+
+    // Constructor
+    Segitiga(int a, int t) {
+        alas = a;
+        tinggi = t;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Segitiga: " + (0.5 * alas * tinggi));
+        System.out.println("Keliling Segitiga: " + (alas + tinggi + Math.sqrt(alas*alas + tinggi*tinggi)));
+        System.out.println("-------------------------");
+    }
+}
+
+class JajarGenjang {
+    int panjang;
+    int lebar;
+    int tinggi;
+
+    // Constructor
+    JajarGenjang(int p, int l, int t) {
+        panjang = p;
+        lebar = l;
+        tinggi = t;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Jajar Genjang: " + (panjang * tinggi));
+        System.out.println("Keliling Jajar Genjang: " + (2 * (panjang + lebar)));
+        System.out.println("-------------------------");
+    }
+}
+
+class kubus {
+    int sisi;
+
+    // Constructor
+    kubus(int s) {
+        sisi = s;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Kubus: " + (6 * sisi * sisi));
+        System.out.println("Volume Kubus: " + (sisi * sisi * sisi));
+        System.out.println("-------------------------");
+    }
+}
+
+class LayangLayang {
+    int d1;
+    int d2;
+
+    // Constructor
+    LayangLayang(int diagonal1, int diagonal2) {
+        d1 = diagonal1;
+        d2 = diagonal2;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Layang-Layang: " + (0.5 * d1 * d2));
+        double sisi = Math.sqrt(Math.pow(d1 / 2.0, 2) + Math.pow(d2 / 2.0, 2));
+        System.out.println("Keliling Layang-Layang: " + (4 * sisi));
+        System.out.println("-------------------------");
+    }
+}
+
+class Trapesium   {
+    int a;
+    int b;
+    int t;
+
+    // Constructor
+    Trapesium(int sisiA, int sisiB, int tinggi) {
+        a = sisiA;
+        b = sisiB;
+        t = tinggi;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Trapesium: " + (0.5 * (a + b) * t));
+        System.out.println("Keliling Trapesium: " + (a + b + 2 * Math.sqrt(((b - a) * (b - a) + t * t))));
+        System.out.println("-------------------------");
+    }
+}
+
+class Balok {
+    int panjang;
+    int lebar;
+    int tinggi;
+
+    // Constructor
+    Balok(int p, int l, int t) {
+        panjang = p;
+        lebar = l;
+        tinggi = t;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Balok: " + (2 * (panjang * lebar + panjang * tinggi + lebar * tinggi)));
+        System.out.println("Volume Balok: " + (panjang * lebar * tinggi));
+        System.out.println("-------------------------");
+    }
+}
+
+class Prisma {
+    int panjang;
+    int lebar;
+    int tinggi;
+
+    // Constructor
+    Prisma(int p, int l, int t) {
+        panjang = p;
+        lebar = l;
+        tinggi = t;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Prisma: " + (2 * (panjang * lebar) + (panjang + lebar) * 2 * tinggi));
+        System.out.println("Volume Prisma: " + (panjang * lebar * tinggi));
+        System.out.println("-------------------------");
+    }
+}
+
+class Tabung  {
+    int r;
+    int t;
+
+    // Constructor
+    Tabung(int radius, int tinggi) {
+        r = radius;
+        t = tinggi;
+    }
+
+    void CetakPerhitungan(){
+        System.out.println("Luas Tabung: " + (2 * Math.PI * r * (r + t)));
+        System.out.println("Volume Tabung: " + (Math.PI * r * r * t));
+        System.out.println("-------------------------");
+    }
+}
+
+public class BangunDatar {
+    public static void main(String[] args) {
+        // 🔹 Constructor dipanggil secara otomatis saat membuat objek baru
+        PersegiPanjang bentuk1 = new PersegiPanjang(10,40);
+        bentuk1.CetakPerhitungan();
+
+        Persegi bentuk2 = new Persegi(10);
+        bentuk2.CetakPerhitungan();
+
+        Segitiga bentuk3 = new Segitiga(10,40);
+        bentuk3.CetakPerhitungan();
+
+        JajarGenjang bentuk4 = new JajarGenjang(10,40,20);
+        bentuk4.CetakPerhitungan();
+
+        kubus bentuk5 = new kubus(10);
+        bentuk5.CetakPerhitungan();
+
+        LayangLayang bentuk6 = new LayangLayang(10,20);
+        bentuk6.CetakPerhitungan();
+
+        Trapesium bentuk7 = new Trapesium(10,20,30);
+        bentuk7.CetakPerhitungan();
+
+        Balok bentuk8 = new Balok(10,20,30);
+        bentuk8.CetakPerhitungan();
+
+        Prisma bentuk9 = new Prisma(10,20,30);
+        bentuk9.CetakPerhitungan();
+
+        Tabung bentuk10 = new Tabung(10,30);
+        bentuk10.CetakPerhitungan();
+    }
+}
