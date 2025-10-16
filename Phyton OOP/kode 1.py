@@ -2,7 +2,7 @@
 
 class Human:
 
-    species = "Homo Sapiens"
+    species = "Homo Sapiens" # ? ini adalah variabel class 
 
     def __init__(self, name, age, gender):
         self.name = name
