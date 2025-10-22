@@ -4,9 +4,9 @@ class Human:
 
     species = "Homo Sapiens" # ? ini adalah variabel class 
 
-    def __init__(self, name, age, gender):
+    def __init__(self, name, age, gender): # Untuk menginisiasi deklarasi atribut
         self.name = name
-        self.age = age
+        self.age = age  #! self mengacu pada objek ini, | klo di java namnaya this 
         self.gender = gender
 
 
