@@ -10,11 +10,11 @@ class Human:
         self.gender = gender
 
 
-# membuat objek
+# membuat objek dari kelas human terus itu data nyaa
 x = Human("Edcorner", 32, "Male")
 y = Human("Learning", 30, "Female")
 
 # menampilkan hasil
-print(x.name, x.age, x.gender)
+print(x.name, x.age, x.gender) # nama objek di ikuti nama varizbel
 print(y.name, y.age, y.gender)
 print(x.species)
